@@ -1,7 +1,7 @@
 # Description of the challenge
 # Write a function that receives an array of type integer
-# , checks if a given integer is in the ** array or not**
-# , and returns the result of boolean type.
+# checks if a given integer is in the ** array or not**
+# and returns the result of boolean type.
 
 def find_element(array, element):
  return element in array
