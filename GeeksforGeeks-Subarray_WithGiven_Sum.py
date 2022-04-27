@@ -3,6 +3,10 @@
 # find a continuous sub-array which adds to a given number S.
 # In case of multiple subarrays, return the subarray which comes first
 # on moving from left to right.
+def finde_indexes(arr,list1):
+    list_indexses = [arr.index(i) for i in list1 ]
+    return list_indexses
+
 def subArraySum(arr, n, s):
     j = 0
     sum = 0
@@ -18,7 +22,7 @@ def subArraySum(arr, n, s):
         j+=1
      else:
         break
-    print(list1, " In the list Sums to ", s)
+    print('indexes:', finde_indexes(arr,list1),'which contain the values:',list1, " Sums to ", s)
 
 list = [1,2,3,7,2]
 s = 12
