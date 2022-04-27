@@ -15,6 +15,8 @@ def subArraySum(arr, n, s):
      for i in range(j,n):
         list1.append(arr[i])
         sum += arr[i]
+        if sum == s:
+            break
 
      if sum != s:
         list1.clear()
