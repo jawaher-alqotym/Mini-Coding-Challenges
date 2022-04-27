@@ -18,6 +18,9 @@ def subtract(num1, num2):
 
 
 
+a = 90
+b = 60
 
 
-print(subtract(33, 60))
+print(a,'-',b,'=',subtract(a, b))
+
