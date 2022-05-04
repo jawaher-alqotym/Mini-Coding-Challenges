@@ -13,13 +13,16 @@ def convert_time(time):
 def convert_toAmorPm(time):
 
   n = int(time[0:2:].replace(":",''))
-  if n <= 12:
-    return time+"am"
-  else:
+  if n < 12 or n == 24:
+    return time+" am"
+  elif n != 12:
     n = n - 12
-    return str(n)+time[2:5]+'pm'
+    return str(n)+time[2:5]+' pm'
+  else:
+    return str(n) + time[2:5] + ' pm'
 
-def convert_to24(time,am,pm):
+
+def convert_to24(time,am):
   n = 0
 
   if am != -1 and time[0:2:] != '12':
@@ -33,10 +36,11 @@ def convert_to24(time,am,pm):
     temp_str2 = time[2:5:].replace(':','').replace('p','')
     return (str(n)+":"+temp_str2)
   else:# it is 12:00 am
-    return ('00:00')
+    return ('0:00')
 
 
 
 
-print(convert_time('5:05'))
+print(convert_time('1:12 pm'))
+
 
