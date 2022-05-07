@@ -15,11 +15,7 @@ def is_prime(n):
     return True
 
 def primes_nums(array):
-    array2 = []
-    for i in range(len(array)):
-        if (is_prime(array[i])):
-            array2.append(array[i])
-
+    array2 = [i for i in array if is_prime(i)]
     return array2
 
 s = [33, 4, 44, 89, 33, 7]
